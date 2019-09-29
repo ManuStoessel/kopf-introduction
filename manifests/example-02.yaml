@@ -1,0 +1,15 @@
+apiVersion: example.org/v1
+kind: LoadTest
+metadata:
+  name: example-02
+  labels:
+    app: loadtest
+spec:
+  # how many replicas should be spawned
+  replicas: 5
+  test:
+    method: "GET"
+    serviceName: "nginx"
+    servicePort: "http"
+    path: "/"
+    repeat: 10

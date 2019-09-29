@@ -1,0 +1,8 @@
+apiVersion: example.org/v1
+kind: SimpleDeployment
+metadata:
+  name: example-01
+  labels:
+    app: simple-app
+spec:
+  sleepytime: "120"
